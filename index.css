@@ -1,13 +1,14 @@
-html, body {
-  min-width: 100vh;
-  position: relative;
-  min-height: 100vh;
+body {
   font-family: 'Source Code Pro', monospace;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  align-content: center;
 }
 
 #navbar {
   position: relative;
-
+  grid-row: 1;
+  margin: 0 auto;
   border-color: #7793c9;
   width: 100%;
 }
@@ -42,14 +43,13 @@ a:hover {
 }
 
 #banner {
+  grid-row: 2;
   background: #BBD5ED;
   display: grid;
+  justify-content: space-between;
   align-content: center;
-  justify-content: center;
   font-size: 15px;
-  height: 256px;
-  grid-template-columns: 250px 415px 250px;
-  grid-template-rows: 125px 48px 45px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .banner-left {
@@ -71,33 +71,37 @@ a:hover {
 
 .banner-img {
   grid-column: 2;
-  grid-row: 1;
-  margin: 5px auto 0px;
+  /* grid-row: 1; */
+  display: flex;
+  align-content: center;
 }
 
 .banner-img img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 60px 60px;
+  margin: 0 auto;
 }
 
 .banner-name {
   grid-column: 2;
-  grid-row: 2;
-  margin: auto;
   font-size: 50px;
+  text-align: center;
 }
+
 
 .banner-title {
   grid-column: 2;
-  grid-row: 3;
+  /* grid-row: 3; */
   margin: 0 auto;
   font-size: 30px;
   font-style: italic;
   font-weight: 100;
+  text-align: center;
 }
 
 #project-wrapper {
+  grid-row: 3;
   display: grid;
   margin: 5px auto;
   justify-content: center;
@@ -251,6 +255,7 @@ a:hover {
 }
 
 #footer {
+  grid-row: 4;
   background: #BBD5ED;
   /* background: #7793c9; */
   height: 40px;
@@ -272,4 +277,10 @@ a:hover {
 
 .footer-link:hover a {
   color: #95989c;
+}
+
+@media only screen and (max-width: 760px) {
+  #banner {
+    display: none;
+  }
 }
