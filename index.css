@@ -1,8 +1,7 @@
 html, body {
   font-family: 'Source Code Pro', monospace;
   min-height: 100vh;
-  min-width: 99vh;
-  overflow: auto;
+  min-width: 100vh;
   margin: auto;
 }
 
@@ -296,6 +295,7 @@ a:hover {
   height: 40px;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
 }
 
 .footer-link-container {
@@ -312,6 +312,7 @@ a:hover {
 }
 
 @media (max-width: 500px) {
+
 
 
   #banner {
