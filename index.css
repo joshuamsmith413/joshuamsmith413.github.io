@@ -1,8 +1,17 @@
-body {
-  align-content: center;
-  display: grid;
+html, body {
   font-family: 'Source Code Pro', monospace;
+  min-height: 100vh;
+  min-width: 99vh;
+  overflow: auto;
+  margin: auto;
+}
+
+
+.big-wrapper {
+  display: grid;
   grid-template-rows: repeat(4, auto);
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 #navbar {
@@ -43,20 +52,26 @@ a:hover {
 }
 
 #banner {
+  display: flex;
   align-content: center;
   background: #BBD5ED;
-  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 15px;
   grid-row: 2;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
 }
 
 .banner-left {
+  flex-basis: 33%;
   display: block;
-  grid-column: 1;
+  /* grid-column: 1; */
   font-weight: 100;
   margin: auto 0;
+}
+
+.pill {
+  flex-basis: 33%;
 }
 
 .banner-header {
@@ -67,10 +82,30 @@ a:hover {
 
 .banner-right {
   display: block;
-  grid-column: 3;
+  flex-basis: 33%;
   font-weight: 100;
   margin: auto 0;
-}
+  }
+
+
+/* @media only screen and (max-width: 500px) {
+  #banner {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .banner-right {
+    grid-row: 1;
+  }
+
+  .pill {
+    grid-row: 2;
+  }
+
+  .banner-left {
+    grid-row: 3;
+  }
+} */
 
 .banner-img {
   grid-column: 2;
@@ -255,14 +290,11 @@ a:hover {
 }
 
 #footer {
-  grid-row: 4;
   background: #BBD5ED;
-  /* background: #7793c9; */
-  height: 40px;
   display: flex;
+  grid-row: 4;
+  height: 40px;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
@@ -279,8 +311,14 @@ a:hover {
   color: #95989c;
 }
 
-@media only screen and (max-width: 760px) {
+@media (max-width: 500px) {
+
+
   #banner {
-    display: none;
+    flex-direction: column;
+  }
+
+  .hidden {
+    visibility: visible;
   }
 }
