@@ -1,7 +1,7 @@
 html, body {
   font-family: 'Source Code Pro', monospace;
   min-height: 100vh;
-  width: 100%;
+  width: 99%;
   display: flex;
   flex-direction: column;
 }
