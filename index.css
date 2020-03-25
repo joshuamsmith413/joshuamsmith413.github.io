@@ -1,7 +1,13 @@
 html, body {
   font-family: 'Source Code Pro', monospace;
   min-height: 100vh;
-  min-width: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+  width: 100%;
 }
 
 #nav-name {
@@ -16,6 +22,18 @@ html, body {
 
 .banner {
   background: #BBD5ED;
+}
+
+#banner {
+  flex-direction: column;
+}
+
+.hidden {
+  display: block;
+}
+
+#project-button-container {
+  display: none;
 }
 
 .banner-name {
@@ -53,25 +71,73 @@ a {
   text-decoration: inherit;
 }
 
+.project-card {
+  display: grid;
+  background: #f2f2f2;
+  width: 70%;
+  height: 100%;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  box-shadow: 5px 5px 11px 0px rgba(0,0,0,0.1);
+  margin: 20px auto;
+}
 
-@media (min-width: 800px) {
+.project-card:hover {
+  opacity: .5;
+}
+
+.project-image {
+  grid-column: 1;
+  margin: auto 15px;
+  width: 202px;
+  height: 135px;
+}
+
+.project-image img{
+  width: 100%;
+  height: 100%;
+}
+
+.project-image:hover img {
+  opacity: .5;
+}
+
+.project-textarea {
+  grid-row: 1;
+  grid-column: 2;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-name {
+  max-width: 100%;
+  word-break: break-word;
+  width: 100%;
+}
+
+.project-links {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.project-description {
+  font-weight: 400;
+}
+
+#footer {
+  background: #BBD5ED;
+  display: flex;
+  justify-content: center;
+  order: 4;
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
   html, body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding-bottom: 20px;
-  }
 
-
-  #navbar {
-    display: flex;
-    align-content: flex-end;
-    order: 1;
-    width: 100%;
-  }
-
-  #nav-name {
-    margin-left: 8px;
   }
 
   a:hover {
@@ -80,9 +146,7 @@ a {
   }
 
   #nav-link-container {
-    align-self: flex-end;
-    position: absolute;
-    right: 16px;
+    float: right;
   }
 
   .nav-link {
@@ -97,17 +161,18 @@ a {
     justify-content: center;
     font-size: 15px;
     order: 2;
-    min-width: 100vh;
+    width: 100%;
+
   }
 
   .banner-left {
-    flex-basis: 33%;
+    flex-basis: 30%;
     font-weight: 100;
     margin: auto 0;
   }
 
   .pill {
-    flex-basis: 33%;
+    flex-basis: 39%;
   }
 
   .banner-header {
@@ -118,7 +183,7 @@ a {
 
   .banner-right {
     display: block;
-    flex-basis: 33%;
+    flex-basis: 30%;
     font-weight: 100;
     margin: auto 0;
     }
@@ -139,31 +204,64 @@ a {
 
   #project-wrapper {
     order: 3;
-    display: grid;
-    margin: 5px auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+    min-height: 400px;
   }
 
   #project-button-container {
-    grid-column: 2;
-    grid-row: 1;
-    margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  .project-card {
+    display: grid;
+    background: #f2f2f2;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto 173px;
+    grid-template-rows: auto;
+    box-shadow: 5px 5px 11px 0px rgba(0,0,0,0.1);
+    margin: 0;
+  }
+
+  .project-image {
+    grid-column: 1;
+    margin: auto 15px;
+    width: 135px;
+    height: 100px;
+  }
+
+  .top {
+    position: absolute;
+    top: 4%;
+  }
+
+  .right {
+    right: 4%;
+    position: absolute;
+  }
+
+  .bottom {
+    bottom: 4%;
+    position: absolute;
+  }
+
+  .left {
+    left: 4%;
+    position: absolute;
   }
 
   .button {
     border: solid;
     align-self: center;
-    margin: 0px auto;
     font-size: 15px;
-    padding: 17px 68px 29px 39px;
+    padding: 20px 20px;
     background: #2C497F;
     color: white;
-    width: 52px;
-    height: 44px;
     grid-column: 1;
+    border-radius: 30px 30px;
   }
 
   .button:hover {
@@ -176,131 +274,8 @@ a {
     color: #7793c9;
   }
 
-  .offset {
-    margin-left: 20px;
-  }
-
-  .onset {
-    margin-right: 20px;
-  }
-
   .hidden {
-    visibility: hidden;
-  }
-
-  .des-one {
-    grid-column: 3;
-    grid-row: 1;
-    width: 100%;
-    min-height: 100%;
-  }
-
-  .des-two {
-    grid-column: 1;
-    grid-row: 1;
-    min-height: 100%;
-    width: 100%;
-  }
-
-  .des-three {
-    grid-column: 3;
-    grid-row: 2;
-    min-height: 100%;
-    width: 100%;
-  }
-
-  .des-four {
-    grid-column: 1;
-    grid-row: 2;
-    min-height: 100%;
-    width: 100%;
-  }
-
-  .project-card {
-    display: grid;
-    max-width: 100%;
-    max-height: 100%;
-    grid-template-columns: 150px 173px;
-    grid-template-rows: 33px;
-  }
-
-
-  .project-image {
-    grid-column: 1;
-    margin: 0px 10px;
-    width: 135px;
-    height: 100px;
-  }
-
-  .project-image img{
-    width: 100%;
-    height: 100%;
-  }
-
-  .project-image:hover img {
-    opacity: .5;
-  }
-
-  .project-textarea {
-    grid-row: 1;
-    grid-column: 2;
-    font-weight: 800;
-    font-size: 16px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .project-name {
-    max-width: 100%;
-    word-break: break-word;
-    width: 100%;
-  }
-
-  .project-links {
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  .project-description {
-    font-weight: 400;
-  }
-
-  /* number one */
-  .one {
-    grid-row: auto;
-    border-radius: 15px 45px 45px 32px;
-  }
-
-  /* number two */
-  .two {
-    grid-row: auto;
-    border-radius: 45px 15px 32px 45px;
-  }
-
-  /* number three */
-  .three {
-    grid-row: auto;
-    border-radius: 15px 45px 45px 32px;
-  }
-
-  /* number four */
-  .four {
-    grid-row: auto;
-    border-radius: 45px 15px 32px 45px;
-  }
-
-  #footer {
-    background: #BBD5ED;
-    display: flex;
-    order: 4;
-    height: 40px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .footer-link-container {
-    align-self: center;
+    display: none;
   }
 
   .footer-link a {
@@ -311,58 +286,4 @@ a {
   .footer-link:hover a {
     color: #95989c;
   }
-}
-
-@media (max-width: 800px) {
-
-  body {
-    max-width: 100vh;
-  }
-
-
-  #banner {
-    flex-direction: column;
-  }
-
-  .hidden {
-    visibility: visible;
-  }
-
-  #project-button-container {
-    display: none;
-  }
-/*
-  #project-wrapper {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-  } */
-
-  /* .des-one {
-    grid-column: 1 / 4;
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
-  }
-
-  .des-two {
-    grid-column: 1 / 4;
-    grid-row: 2;
-    width: 100%;
-    height: 100%;
-  }
-
-  .des-three {
-    grid-column: 1 / 4;
-    grid-row: 3;
-    width: 100%;
-    height: 100%;
-  }
-
-  .des-four {
-    grid-column: 1 / 4;
-    grid-row: 4;
-    width: 100%;
-    height: 100%;
-  } */
-
 }
