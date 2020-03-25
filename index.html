@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
     <meta charset="utf-8">
     <title>Porfolio of Josh</title>
   </head>
   <body>
-    <div class="big-wrapper">
+
       <div id="navbar">
         <span id="nav-name">Joshua Smith</span>
         <span id="nav-link-container">
@@ -29,7 +29,7 @@
           </span>
         </span>
       </div>
-      <div id="banner">
+      <div class="banner">
         <div class="banner-left">
           <div class="banner-header">
             Most Recently
@@ -54,16 +54,20 @@
           Below are projects from my time at Flatiron School, built within a week time frame. Unlike this website, these projects use Javascript frameworks(React/Angular). When I did this site I wanted to keep it light and use html/css with a little JS.
         </div>
       </div>
+
       <div id="project-wrapper">
-        <div class="des-two hidden">
+
+        <div class="des-two top left hidden">
           <div class="project-card">
             <div class="project-image">
               <a href= "https://menew-frontend.herokuapp.com/" target="_blank" rel="noopener noreferrer" alt="menew homepage picture">
                 <img src="./images/menewPic.png" alt="menew homepage"/>
               </a>
             </div>
-            <div class="project-name">
-              Menew(Ruby on Rails/React)
+            <div class="project-textarea">
+              <div class="project-name">
+                Menew(Ruby on Rails/React)
+              </div>
               <div class="project-description">
                 <div class="project-links">
                   <a href= "https://menew-frontend.herokuapp.com/" target="_blank" rel="noopener noreferrer" alt="menew homepage picture"> Demo </a> |
@@ -75,15 +79,17 @@
           </div>
         </div>
 
-        <div class="des-one hidden">
+        <div class="des-one top right hidden">
           <div class="project-card">
             <div class="project-image">
               <a href="https://hashketball-frontend.herokuapp.com/" target="_blank" rel="noopener noreferrer">
                 <img src="./images/hashketballPic.png" alt="the hashketball homepage"/>
               </a>
             </div>
-            <div class="project-name">
-              Hashketball(Rails/React)
+            <div class="project-textarea">
+              <div class="project-name">
+                Hashketball(Rails/React)
+              </div>
               <div class="project-description">
                 <div class="project-links">
                   <a href="https://hashketball-frontend.herokuapp.com/" target="_blank" rel="noopener noreferrer"> Demo </a> |
@@ -95,15 +101,17 @@
           </div>
         </div>
 
-        <div class="des-four hidden">
+        <div class="des-four bottom right hidden">
           <div class="project-card">
             <div class="project-image">
               <a href= "https://menew-frontend.herokuapp.com/" target="_blank" rel="noopener noreferrer" alt="menew homepage picture">
                 <img src="./images/biPic.png" alt="menew homepage"/>
               </a>
             </div>
-            <div class="project-name">
-              BI Product Card
+            <div class="project-textarea">
+              <div class="project-name">
+                BI Product Card
+              </div>
               <div class="project-description">
                 Created to fit Google's amp needs
               </div>
@@ -111,15 +119,17 @@
           </div>
         </div>
 
-        <div class="des-three hidden">
+        <div class="des-three bottom left hidden">
           <div class="project-card">
             <div class="project-image">
               <a href="https://github.com/whosAle/jawn" target="_blank" rel="noopener noreferrer" alt="hood home page picture">
                 <img src="./images/hoodPic.png" alt="the hood homepage"/>
               </a>
             </div>
-            <div class="project-name">
-              Hood(Ruby on Rails)
+            <div class="project-textarea">
+              <div class="project-name">
+                Hood(Ruby on Rails)
+              </div>
               <div class="project-links">
                 <a href="https://github.com/whosAle/jawn" target="_blank" rel="noopener noreferrer" alt="hood home page picture">Github</a>
               </div>
@@ -131,19 +141,16 @@
         </div>
 
         <div id="project-button-container">
-          <div class="header project">
-
-          </div>
-          <div class="button one offset">
+          <div class="button one">
             Hashketball
           </div>
-          <div class="button two onset">
+          <div class="button two">
             Menew
           </div>
-          <div class="button three offset">
+          <div class="button three">
             Hood
           </div>
-          <div class="button four onset">
+          <div class="button four">
             BI Work
           </div>
         </div>
@@ -167,7 +174,7 @@
           </span>
         </div>
       </div>
-    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
