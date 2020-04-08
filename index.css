@@ -264,13 +264,9 @@ a:hover {
     order: 3;
     position: relative;
     min-height: 400px;
-  }
-
-  #project-button-container {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
   }
 
   .project-card {
@@ -278,7 +274,7 @@ a:hover {
     background: #f2f2f2;
     width: 100%;
     height: 100%;
-    grid-template-columns: auto 173px;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     box-shadow: 5px 5px 11px 0px rgba(0,0,0,0.1);
     margin: 0;
@@ -289,26 +285,6 @@ a:hover {
     margin: auto 15px;
     width: 135px;
     height: 100px;
-  }
-
-  .top {
-    position: absolute;
-    top: 4%;
-  }
-
-  .right {
-    right: 4%;
-    position: absolute;
-  }
-
-  .bottom {
-    bottom: 4%;
-    position: absolute;
-  }
-
-  .left {
-    left: 4%;
-    position: absolute;
   }
 
   .button {
@@ -332,9 +308,6 @@ a:hover {
     color: #7793c9;
   }
 
-  .hidden {
-    display: none;
-  }
 
   .footer-link a {
     margin: 0px 6px;
