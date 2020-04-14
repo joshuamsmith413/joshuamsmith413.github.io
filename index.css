@@ -84,6 +84,14 @@ html, body {
   text-align: center;
 }
 
+.banner-left {
+  text-align: center;
+}
+
+.banner-right {
+  text-align: center;
+}
+
 .banner-title {
   font-size: 30px;
   font-style: italic;
